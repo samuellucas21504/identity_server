@@ -28,9 +28,6 @@ public class MailService : IMailService
                 MailboxAddress emailTo = new MailboxAddress(mailData.EmailToName, mailData.EmailToId);
                 emailMessage.To.Add(emailTo);
 
-                emailMessage.Cc.Add(new MailboxAddress("Cc Receiver", "cc@example.com"));
-                emailMessage.Bcc.Add(new MailboxAddress("Bcc Receiver", "bcc@example.com"));
-
                 emailMessage.Subject = mailData.EmailSubject;
 
                 BodyBuilder emailBodyBuilder = new BodyBuilder();
